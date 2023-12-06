@@ -1,0 +1,102 @@
+{% extends 'ecommerce/bases/ecommerce_base.html' %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- left navigation -->
+<div class="profile-left-nav">
+    <h2>Hello, Demir</h2>
+    <a href=""><i class="ri-price-tag-3-line"></i> Purchases <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href="" class="active-link-profile"><i class="ri-settings-4-line"></i> Settings <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href=""><i class="ri-logout-box-line"></i> Logout <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+</div>
+
+<!-- right content -->
+<div class="right-content-wrapper">
+
+    <h3>Update - Address</h3>
+    
+    <!-- collapse: billing address -->
+    <div class="profile-settings-update-box">
+        <button>UPDATE</button>
+        <h3>Billing Address</h3>
+        <p>
+            Vişnezade<br>
+            Visnezade Mahallesi. Visnezade Camii Sokak. Apt no:12 - Daire:1 Kat:-1  34357. <br>
+            Beşiktaş / İstanbul <br>
+            Türkiye
+        </p>
+
+        <div class="hidden-billing-address-form">
+
+        </div>
+    </div>
+
+    <!-- collapse: delivery adress -->
+    <div class="profile-settings-update-box">
+        <button id="deliver-address-open-btn">UPDATE</button>
+        <div class="profile-settings-adress-delivery-display-box" id="delivery-toggle-hide">
+            <h3>Delivery Address</h3>
+            <p>No delivery address is registered.</p>
+        </div>
+        <div class="hidden-delivery-address-form" id="delivery-toggle-show">
+            <form>
+                <label>First Name</label>
+                <input type="text" value="..." placeholder="John">
+                <label>Last Name</label>
+                <input type="text" value="..." placeholder="Doe">
+                <label>City</label>
+                <select>
+                    <option>...</option>
+                </select>
+                <label>District</label>
+                <select>
+                    <option>...</option>
+                </select>
+                <label>Area</label>
+                <select>
+                    <option>...</option>
+                </select>
+                <label>Address Line 1</label>
+                <input type="text" value="..." placeholder="Doe">
+                <label>Country</label>
+                <select>
+                    <option>...</option>
+                </select>
+                <input type="submit" value="Save" class="save-btn">
+            </form>
+            <a href="#" id="close-hidden-delivery-panel" class="cancel-btn">Cancel</a>
+        </div>
+    </div>
+    
+    <script>
+
+        // toggle: hidden billing address
+
+        // I will do this later on keeping the main look just for future reference while deving MVT
+
+        
+        // toggle: hidden delivery adress
+        let delivery_open_btn = document.getElementById("deliver-address-open-btn");
+        let delivery_close_btn = document.getElementById("close-hidden-delivery-panel");
+
+        delivery_open_btn.onclick = function() {
+            delivery_open_btn.style.display = "none";
+            document.getElementById("delivery-toggle-hide").style.display = "none";
+            document.getElementById("delivery-toggle-show").style.display = "block";
+        }
+
+        delivery_close_btn.onclick = function() {
+            delivery_open_btn.style.display = "block";
+            document.getElementById("delivery-toggle-hide").style.display = "block";
+            document.getElementById("delivery-toggle-show").style.display = "none";
+        }
+
+    </script>
+</div>
+
+{% endblock %}

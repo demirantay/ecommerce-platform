@@ -1,0 +1,28 @@
+{% extends 'ecommerce/bases/ecommerce_base.html' %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- left navigation -->
+<div class="profile-left-nav">
+    <h2>Hello, Demir</h2>
+    <a href=""><i class="ri-price-tag-3-line"></i> Purchases <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href="" class="active-link-profile"><i class="ri-settings-4-line"></i> Settings <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href=""><i class="ri-logout-box-line"></i> Logout <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+</div>
+
+<!-- right content -->
+<div class="right-content-wrapper">
+
+    <h3>Update - Payment Settings</h3>
+    
+    <p class="right-wrapper-desc">There is no registered card. For your next purchase, you can register your card on the payment page.</p>
+
+    
+</div>
+
+{% endblock %}

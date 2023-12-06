@@ -1,0 +1,89 @@
+{% extends 'ecommerce/bases/ecommerce_base.html' %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- left navigation -->
+<div class="profile-left-nav">
+    <h2>Hello, Demir</h2>
+    <a href=""><i class="ri-price-tag-3-line"></i> Purchases <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href="" class="active-link-profile"><i class="ri-settings-4-line"></i> Settings <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href=""><i class="ri-logout-box-line"></i> Logout <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+</div>
+
+<!-- right content -->
+<div class="right-content-wrapper">
+
+    <h3>Settings</h3>
+    <p class="right-wrapper-desc">You can manage your account and subscriptions here</p>
+
+    <!-- profile settgins update boxes -->
+    <div class="profile-settings-view-box">
+        <a href="">UPDATE</a>
+
+        <h3>Information</h3>
+
+        <label>E-mail</label>
+        <p>demir99antay@gmail.com</p>
+
+        <label>First Name</label>
+        <p>Demir</p>
+
+        <label>Last Name</label>
+        <p>Antay</p>
+
+        <label>Birth Date</label>
+
+        <label>Phone Number</label>
+
+        <label>Gender</label>
+
+        <label>Post Code</label>
+
+        <label>Country</label>
+        <p>Turkey</p>
+    </div>
+
+    <div class="profile-settings-view-box">
+        <a href="">UPDATE</a>
+        <h3>Payment Settings</h3>
+        <p class="placeholder-text-profile-settings">There is no registered card. For your next purchase, you can register your card on the payment page.</p>
+    </div>
+
+    <div class="profile-settings-view-box">
+        <a href="">UPDATE</a>
+        <h3>Address</h3>
+
+        <label>Billing Address</label>
+        <p>Vişnezade<br>
+            Visnezade Mahallesi. Visnezade Camii Sokak. Apt no:12 - Daire:1 Kat:-1  34357.<br>
+            Beşiktaş / İstanbul <br>
+            Türkiye</p>
+
+        <label>Delivery Address</label>
+    </div>
+
+    <div class="profile-settings-view-box">
+        <a href="">UPDATE</a>
+        <h3>Newsletter Subscription</h3>
+        
+        <label>Newsletter Subscription</label>
+        <p>Yes, keep my subscription.</p>
+
+        <label>Direct Marketing</label>
+        <p>Yes, keep my subscription.</p>
+    </div>
+
+    <div class="profile-settings-view-box">
+        <h3>Privacy</h3>
+        <br>
+        <a href="" class="profile-settings-box-left-link">Reset Password</a>
+        <br><br>
+    </div>
+</div>
+
+{% endblock %}

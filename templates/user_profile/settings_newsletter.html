@@ -1,0 +1,45 @@
+{% extends 'ecommerce/bases/ecommerce_base.html' %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- left navigation -->
+<div class="profile-left-nav">
+    <h2>Hello, Demir</h2>
+    <a href=""><i class="ri-price-tag-3-line"></i> Purchases <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href="" class="active-link-profile"><i class="ri-settings-4-line"></i> Settings <i class="ri-arrow-right-s-line"
+            id="arrow-right"></i></a>
+    <a href=""><i class="ri-logout-box-line"></i> Logout <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+</div>
+
+<!-- right content -->
+<div class="right-content-wrapper">
+
+    <h3>Update - Newsletter</h3>
+    <br><br>
+    <form>
+        <p><b>Newsletter Subscription:</b></p>
+        <input  type="radio" id="continue_newsletter" name="newsletter_sub" value="continue" checked>
+        <label for="continue_newsletter">Yes, continue my subscription</label><br>
+        <input type="radio" id="cancel_newsletter" name="newsletter_sub" value="cancel">
+        <label for="cancel_newsletter">Cancel my subscription</label><br>
+        
+        <br><br>
+        <p><b>Direct Marketing:</b></p>
+        <input  type="radio" id="continue_direct" name="direct_sub" value="continue" checked>
+        <label for="continue_direct">Yes, continue my subscription</label><br>
+        <input type="radio" id="cancel_direct" name="direct_sub" value="cancel">
+        <label for="cancel_direct">Cancel my subscription</label><br>
+
+        <br><br><br>
+
+        <input type="submit" value="Save" class="save-btn">
+    </form>
+    <a href="" class="cancel-btn">Cancel</a>
+</div>
+
+{% endblock %}

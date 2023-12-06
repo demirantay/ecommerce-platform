@@ -1,0 +1,1096 @@
+/*
+
+    Color Palette:
+    
+    lightgrey: #D5DBDB
+
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto';
+}
+
+.clear-floats {
+    clear: both;
+}
+
+/* ----------------- top nav ---------------- */
+
+.top-nav {
+    border-bottom: 1px solid #D5DBDB;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: white;
+    z-index: 999;
+
+}
+
+.top-nav img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    margin-left: 3%;
+    margin-top: -5px;
+}
+
+.top-nav img:hover {
+    background-color: transparent !important;
+}
+
+.top-nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    padding: 10px;
+    padding-right: 11px;
+    padding-left: 11px;
+    vertical-align: middle;
+
+}
+
+.menu-toggle {
+    font-size: 20px !important;
+}
+
+.menu-toggle:hover {
+    transition: 0.2s;
+    background-color: #D5DBDB;
+    border-radius: 5px;
+}
+
+.top-nav a i {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: -3px;
+}
+
+.top-nav form {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3px;
+}
+
+.top-nav form input {
+    width: 600px;
+    border-radius: 25px;
+    border: 2px solid #E5E8E8;
+    background-color: #E5E8E8;
+    padding: 8px 25px;
+}
+
+.top-nav form input:hover {
+    transition: 0.2s;
+    border-color: black;
+}
+
+.top-nav-right {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3%;
+    margin-top: 7px;
+
+}
+
+.top-nav-right a {
+    margin-right: 15px;
+    text-decoration: none;
+    padding: 0px;
+    font-size: 22px;
+    color: black;
+    padding: 10px;
+    padding-right: 11px;
+    padding-left: 11px;
+}
+
+.top-nav-right a:hover {
+    background-color: #D5DBDB;
+    border-radius: 50%;
+    transition: 0.2s;
+
+}
+
+/* ---------- hidden mobile nav ------------ */
+.hidden-mobile-top-nav {
+    border-bottom: 1px solid #D5DBDB;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: white;
+    z-index: 999;
+    display: none;
+}
+
+.hidden-mobile-top-nav img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    margin-left: 3%;
+    margin-top: -5px;
+}
+
+.hidden-mobile-top-nav img:hover {
+    background-color: transparent !important;
+}
+
+.hidden-mobile-top-nav a {
+    margin-right: 0px;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    padding: 10px;
+    padding-right: 6px;
+    padding-left: 6px;
+    vertical-align: middle;
+}
+
+.hidden-mobile-top-nav form {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.hidden-mobile-top-nav form input {
+    width: 80%;
+    border-radius: 25px;
+    border: 2px solid #E5E8E8;
+    background-color: #E5E8E8;
+    padding: 8px 25px;
+}
+
+.hidden-mobile-top-nav form input:hover {
+    transition: 0.2s;
+    border-color: black;
+}
+
+.top-mobile-nav-right {
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}
+
+.top-mobile-nav-right button {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+/* ----------------- hidden left menu ---------------- */
+
+.hidden-nav-bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 999 !important;
+    display: none;
+    transition: 0.5s !important; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.hidden-left-menu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 99999; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: white; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.2s; /* 0.5 second transition effect to slide in the sidenav */
+
+    /*
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: white;
+    overflow-x: hidden;
+    z-index: 99999;
+    display: none;
+    transition: 0.2s;
+    */
+}
+
+.hidden-left-menu button {
+    /*
+    font-weight: 600;
+    font-size: 35px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-left: 11%;
+    margin-top: 30px;
+    margin-right: 40px;
+    vertical-align: middle;
+    padding: 4px 8px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    */
+    position: absolute;
+    top:0;
+    font-weight: 600;
+    font-size: 35px;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    right:0;
+
+    margin-right: 20px;
+    margin-top: 10px;
+
+    padding: 4px 8px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    
+}
+
+.hidden-left-menu button:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.hidden-left-menu a img {
+    height: 30px;
+    vertical-align: middle;
+    margin-top: 28px;
+    margin-bottom: 25px;
+}
+
+
+.hidden-menu-categories {
+    width: 60%;
+    margin-left: 30%;
+    margin-top: 30px;
+}
+
+.hidden-menu-categories h3 {
+    margin-bottom: 30px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.hidden-menu-categories a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+
+    font-size: 1.0rem;
+    line-height: 1.364;
+    color: #111;
+}
+
+.hidden-menu-categories a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------- hidden login modal ---------------- */
+.hidden-login-panel {
+    background-color: white !important;
+    border: 1px solid lightgrey;
+    z-index: 99999 !important; 
+    width: 30%;
+    margin-left: 35%;
+    display: none;
+    position: fixed;
+    padding: 25px 20px;
+    margin-top: 10vh;
+}
+
+.hidden-login-panel button {
+    position: absolute;
+    top:0;
+    right:0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: grey;
+    font-weight: 300;
+}
+
+.hidden-login-panel button:hover {
+    cursor: pointer;
+}
+
+.hidden-login-panel h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.hidden-login-panel p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.hidden-login-panel form {
+    margin-bottom: 4px;
+}
+
+.hidden-login-panel form label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.hidden-login-panel form input {
+    width: 97%;
+    padding: 10px 4px;
+    border-radius: 0px;
+    border: 1px solid lightgrey;
+    margin-bottom: 5px;
+}
+
+.hidden-login-panel form input:focus {
+    outline: none;
+    border-color: black;
+}
+
+.forgot-pass-link {
+    float: right;
+    display: block;
+    color:#242424;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.sign-in-btn {
+    display: block;
+    width: 100%;
+    background-color:#242424;
+    color: white;
+    border: 1px solid #242424;
+    padding: 10px 0px !important;
+    margin-top: 20px;
+    font-size: 16px;
+    word-spacing: 2px;
+    font-weight: 500;
+}
+
+.sign-in-btn:hover {
+    cursor: pointer;
+    background-color: #444;
+    transition: 0.2s;
+}
+
+.become-member-link {
+    display: block;
+    border: 1px solid #242424;
+    color: #242424;
+    width: 99.5%;
+    padding: 10px 0px;
+    margin-top: 10px;
+    font-size: 16px;
+    word-spacing: 2px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.become-member-link:hover {
+    border-color: black;
+    transition: 0.2s;
+    color: grey;
+    border-color: grey;
+}
+
+/* ----------------- hidden signup modal ---------------- */
+.hidden-signup-panel {
+    background-color: white !important;
+    border: 1px solid lightgrey;
+    z-index: 99999 !important; 
+    width: 30%;
+    margin-left: 35%;
+    display: none;
+    position: fixed;
+    padding: 25px 20px;
+    margin-top: -2vh;
+}
+
+.hidden-signup-panel button {
+    position: absolute;
+    top:0;
+    right:0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: grey;
+    font-weight: 300;
+}
+
+.hidden-signup-panel button:hover {
+    cursor: pointer;
+}
+
+.hidden-signup-panel h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.hidden-signup-panel p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.hidden-signup-panel p a {
+    color: grey;
+}
+
+.hidden-signup-panel form {
+    margin-bottom: 4px;
+}
+
+.hidden-signup-panel form label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.hidden-signup-panel form input {
+    width: 97%;
+    padding: 10px 4px;
+    border-radius: 0px;
+    border: 1px solid lightgrey;
+    margin-bottom: 5px;
+}
+
+.hidden-signup-panel form input:focus {
+    outline: none;
+    border-color: black;
+}
+
+.signup-btn {
+    display: block;
+    width: 100%;
+    background-color:#242424;
+    color: white;
+    border: 1px solid #242424;
+    padding: 10px 0px !important;
+    margin-top: 20px;
+    font-size: 16px;
+    word-spacing: 2px;
+    font-weight: 500;
+}
+
+.signup-btn:hover {
+    cursor: pointer;
+    background-color: #444;
+    transition: 0.2s;
+}
+
+.sign-in-switch-link {
+    display: block;
+    border: 1px solid #242424;
+    color: #242424;
+    width: 99.5%;
+    padding: 10px 0px;
+    margin-top: 10px;
+    font-size: 16px;
+    word-spacing: 2px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.sign-in-switch-link:hover {
+    border-color: black;
+    transition: 0.2s;
+    color: grey;
+    border-color: grey;
+}
+
+
+/* ----------------- hidden right cart menu ---------------- */
+.hidden-right-shopping-cart {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+#hidden-shop-cart-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    margin-right: 0px;
+    text-decoration: none;
+    font-weight: 200;
+    color: black;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+#hidden-right-shop-cart-header {
+    border-bottom: 2px solid black;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.hidden-shopping-cart-cell-wrapper {
+    background-color: transparent;
+    height: 68%;
+    overflow-y: scroll;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.hidden-shopping-cart-cell {
+    border-bottom: 1px solid lightgrey;
+    height: auto;
+    width: 99%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+}
+
+.hidden-shopping-cart-cell-photo {
+    background-color: #F1F2F4;
+    height: 150px;
+    width: 120px;
+    display: inline-block;
+    vertical-align: top;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hidden-shopping-cart-cell-middle {
+    display: inline-block;
+    margin-left: 2%;
+    vertical-align: top;
+    width: 40%;
+    height: 150px;
+}
+
+.hidden-shopping-cart-cell-middle h3 {
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 2px;
+}
+
+.hidden-shopping-cart-cell-middle p {
+    color: grey !important;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 12px;
+
+}
+
+.hidden-shopping-cart-cell-middle h4 {
+    font-weight: 300;
+    font-size: 16px;
+    
+}
+
+.hidden-shopping-cell-operations {
+    border: 1px solid grey;
+    width: 90px;
+    margin-top: 20px;
+}
+
+.hidden-shopping-cell-operations a {
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    padding:0px;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hidden-shopping-cell-operations p {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.hidden-shopping-cart-cell-right {
+    vertical-align: top;
+    display: inline-block;
+    width: 15%;
+    height: 150px;
+}
+
+.hidden-shopping-cart-cell-right a {
+    color: grey;
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+}
+
+.hidden-right-shopping-cart-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid black;
+    height: 24%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.hidden-right-shopping-cart-bottom-left {
+    width: 78%;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.hidden-right-shopping-cart-bottom-left h4 {
+    font-size: 15px;
+}
+
+.hidden-right-shopping-cart-bottom-left p {
+    font-size: 14px;
+    color: grey;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.hidden-right-shopping-cart-bottom-right {
+    width: 18%;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.hidden-right-shopping-cart-bottom-right h4 {
+    font-size: 15px;
+}
+
+.hidden-right-shopping-cart-bottom a {
+    display: block;
+    margin-top: 20px;
+    background-color: black;
+    border: 1px solid black;
+    text-align: center;
+    color: lightgrey;
+    text-decoration: none;
+    font-weight: 200;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    word-spacing: 2px;
+}
+
+.hidden-right-shopping-cart-bottom a:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: black;
+}
+
+/* ----------------- body ---------------- */
+.content-block {
+    background-color: white;
+    height: auto;
+    margin-top: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+/* ----------------- footer ---------------- */
+.footer {
+    height: auto;
+    background-color: #F5F5F5;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+}
+
+.footer-inside-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-col {
+    width: 22%;
+    height: auto;
+    display: inline-block;
+    margin-left: 1.1%;
+    margin-right: 1%;
+    vertical-align: top;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    position: relative;
+    color: #242424;
+}
+
+.footer-col a {
+    font-size: 15px;
+    line-height: 32px;
+    color: #242424;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.footer-col-social-media {
+    margin-top: 20px;
+}
+
+.footer-col-social-media a {
+    display: inline-block !important;
+    font-size: 20px !important;
+    margin-right: 15px !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid lightgrey;
+    margin-top: 40px;
+    padding-top: 15px;
+}
+
+.footer-bottom-wrapper {
+    float: right;
+}
+
+.footer-bottom-wrapper a {
+    font-size: 14px;
+    color: #242424;
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.footer-bottom-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* ----------- hidden mobile footer --------- */
+.hidden-mobile-footer {
+    height: auto;
+    background-color: #F5F5F5;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    display: none;
+}
+
+.accordion {
+    color: #444;
+    background-color: transparent !important;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left !important;
+    border:0px;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-weight: 500;
+  }
+
+  .accordion i {
+    float: right;
+  }
+  
+  .active {
+    background-color: transparent !important; 
+    border: 0px;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: transparent;
+    overflow: hidden;
+    text-align: left !important;
+    width:100%;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
+  }
+
+  .panel a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  .mobile-footer-social-media {
+    margin-top: 30px;
+  }
+
+  .mobile-footer-social-media a {
+    font-size: 22px;
+    color: #242424;
+    display: inline-block;
+    margin-right: 25px;
+    text-decoration: none;
+  }
+
+  .mobile-footer-bottom {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+  }
+
+  .mobile-footer-bottom a {
+    font-size: 14px;
+    color: #242424;
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    .top-nav {
+        display: none;
+    }
+
+    .hidden-mobile-top-nav {
+        display: block;
+    }
+
+    .content-block {
+        margin-top: 110px;
+    }
+    
+    .footer {
+        display: none;
+    }
+
+    .hidden-mobile-footer {
+        display: block;
+    }
+
+    .hidden-login-panel {
+        width: 85%;
+        margin-left: 1%;
+    }
+
+    .hidden-signup-panel {
+        width: 85%;
+        margin-left: 1%;
+    }
+    
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .top-nav {
+        display: none;
+    }
+
+    .hidden-mobile-top-nav {
+        display: block;
+    }
+
+    .content-block {
+        margin-top: 110px;
+    }
+    
+    .footer {
+        display: none;
+    }
+
+    .hidden-mobile-footer {
+        display: block;
+    }
+
+    .hidden-login-panel {
+        width: 85%;
+        margin-left: 2%;
+    }
+
+    .hidden-signup-panel {
+        width: 85%;
+        margin-left: 2%;
+    }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    
+    .top-nav {
+        display: none;
+    }
+
+    .hidden-mobile-top-nav {
+        display: block;
+    }
+
+    .content-block {
+        margin-top: 110px;
+    }
+    
+    .footer {
+        display: none;
+    }
+
+    .hidden-mobile-footer {
+        display: block;
+    }
+
+    .hidden-login-panel {
+        width: 85%;
+        margin-left: 3%;
+    }
+
+    .hidden-signup-panel {
+        width: 85%;
+        margin-left: 3%;
+    }
+
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+    .top-nav {
+        display: none;
+    }
+
+    .hidden-mobile-top-nav {
+        display: block;
+    }
+
+    .content-block {
+        margin-top: 110px;
+    }
+    
+    .footer {
+        display: none;
+    }
+
+    .hidden-mobile-footer {
+        display: block;
+    }
+
+    .hidden-mobile-top-nav form input {
+        width: 87%;
+    }
+
+    .hidden-login-panel {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .hidden-signup-panel {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .top-nav form input {
+        width: 300px;
+    }
+
+    .footer-inside-wrapper {
+        width: 95%;
+    }
+
+    .footer-col-social-media a {
+        margin-right: 8px !important;
+    }
+
+    .hidden-login-panel {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .hidden-signup-panel {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+    .top-nav {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .content-block {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .footer-inside-wrapper {
+        margin-left: 18%;
+        margin-right: 18%;
+    }
+
+
+}

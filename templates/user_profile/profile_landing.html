@@ -1,0 +1,69 @@
+{% extends 'ecommerce/bases/ecommerce_base.html' %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- left navigation -->
+<div class="profile-left-nav">
+    <h2>Hello, Demir</h2>
+    <a href=""><i class="ri-price-tag-3-line"></i> Purchases <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href=""><i class="ri-settings-4-line"></i> Settings <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+    <a href=""><i class="ri-logout-box-line"></i> Logout <i class="ri-arrow-right-s-line" id="arrow-right"></i></a>
+</div>
+
+<!-- right content -->
+<div class="right-content-wrapper">
+
+    <h3>Latest Purchases</h3>
+
+    <a href="" class="latest-puchase-cell-link">
+        <div class="latest-purchase-cell">
+            <div class="latest-puchase-cell-left">
+                <h3>Teslim Edildi</h3>
+                <p>8 products</p>
+            </div>
+            <div class="latest-puchase-cell-right">
+                <p>01.18.2023</p>
+                <p>3000,99 TL</p>
+            </div>
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+    </a>
+    
+    <a href="" class="latest-puchase-cell-link">
+        <div class="latest-purchase-cell">
+            <div class="latest-puchase-cell-left">
+                <h3>Teslim Edildi</h3>
+                <p>8 products</p>
+            </div>
+            <div class="latest-puchase-cell-right">
+                <p>01.18.2023</p>
+                <p>3000,99 TL</p>
+            </div>
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+    </a>
+
+    <a href="" class="latest-puchase-cell-link">
+        <div class="latest-purchase-cell">
+            <div class="latest-puchase-cell-left">
+                <h3>Teslim Edildi</h3>
+                <p>8 products</p>
+            </div>
+            <div class="latest-puchase-cell-right">
+                <p>01.18.2023</p>
+                <p>3000,99 TL</p>
+            </div>
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+    </a>
+
+    <a href="" class="view-all-link">View all purchases <i class="ri-arrow-right-s-line"></i></a>
+
+</div>
+
+{% endblock %}
