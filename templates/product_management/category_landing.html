@@ -1,0 +1,247 @@
+{% extends 'ecommerce/bases/ecommerce_base.html' %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/category_landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- header -->
+<h2 class="category-header">Women</h2>
+
+
+<div class="category-page-wrapper">
+    <!-- filters -->
+    <div class="filter-wrapper">
+        <div class="filter-left">
+            <button id="filter-open-btn"><i class="ri-equalizer-line"></i> FILTER BY</button>
+            <p><b>587</b> Products</p>
+        </div>
+        <div class="filter-right">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Featured <i class="ri-arrow-down-s-line"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Date, new to old</a>
+                    <a href="#">Price, high to low</a>
+                    <a href="#">Price, low to high</a>
+                    <a href="">Featured</a>
+                    <a href="">Best Selling</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hidden filter menu -->
+    <div class="hidden">
+        <div class="filter-nav-bg" id="filter-bg-grey"></div>
+        <div id="mySidenav" class="hidden-filter-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="ri-close-line"></i></a>
+            <h3>FILTER BY</h3>
+            <div class="filter-accordion-wrapper">
+                <form>
+                    <button class="accordion">SALE PRODUCTS <i class="ri-arrow-down-s-line"></i> </button>
+                    <div class="panel">
+                        <input type="checkbox" id="" name="" value="sale">
+                        <label for="vehicle1"> SALE</label><br>
+                    </div>
+                    <button class="accordion">GENDER <i class="ri-arrow-down-s-line"></i></button>
+                    <div class="panel">
+                        <input type="checkbox" id="" name="" value="women">
+                        <label> Feminine</label><br>
+                        <input type="checkbox" id="" name="" value="men">
+                        <label> Masculine</label><br>
+                    </div>
+                    <button class="accordion">CATEGORY <i class="ri-arrow-down-s-line"></i></button>
+                    <div class="panel">
+                        <input type="checkbox" id="" name="" value="furniture">
+                        <label> Furniture</label><br>
+                        <input type="checkbox" id="" name="" value="home_office">
+                        <label> Home Office</label><br>
+                    </div>
+                    <button class="accordion">PRODUCTS <i class="ri-arrow-down-s-line"></i></button>
+                    <div class="panel">
+                        <p>...</p>
+                    </div>
+                    <button class="accordion">SIZE <i class="ri-arrow-down-s-line"></i></button>
+                    <div class="panel">
+                        <p>...</p>
+                    </div>
+                    <button class="accordion">COLOR <i class="ri-arrow-down-s-line"></i></button>
+                    <div class="panel">
+                        <p>...</p>
+                    </div>
+                    <button class="accordion">COLLECTIONS <i class="ri-arrow-down-s-line"></i></button>
+                    <div class="panel">
+                        <p>...</p>
+                    </div>
+
+                    <div class="bottom-filter-btn-wrapper">
+                        <input type="submit" value="FILTER" class="bottom-filter-submit-btn">
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="clear-row mb"></div>
+
+    <!-------- product rows --------->
+    <div class="product-rows">
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+    </div>
+
+    <!-------- product rows --------->
+    <div class="product-rows">
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+        <div class="product-cell-wrapper">
+            <div class="product-cell-img">
+                <a href=""><i class="ri-heart-line"></i></a>
+            </div>
+            <a href="" class="header-link">
+                <h3>OVERSIZED TEE 001</h3>
+            </a>
+            <h4>LES BENJAMINS</h4>
+            <p>999.00TL</p>
+        </div>
+    </div>
+
+    <!-- load more sys -->
+    <div class="load-more-wrapper">
+        <a href="">LOAD MORE</a>
+    </div>
+</div>
+
+
+<script>
+    // misc logic
+    function getWindowSize() {
+        var inner_width = window.innerWidth;
+    }
+    window.onresize = getWindowSize;
+
+    /* When the user clicks on the button, (filter)
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    // OPEN CLOSE DOM logic for left side hidden filer menu
+    /* Set the width of the side navigation to 250px */
+    var inner_width;
+    function getWindowSize() {
+        inner_width = window.innerWidth;
+    }
+    window.onresize = getWindowSize();
+
+    let open_filter_panel_btn = document.getElementById("filter-open-btn");
+    let filter_bg_grey = document.getElementById("filter-bg-grey");
+
+    open_filter_panel_btn.onclick = function openNav() {
+
+        if (inner_width <= 425) {
+            document.getElementById("mySidenav").style.width = "80%";
+        } else if (inner_width <= 1024) {
+            document.getElementById("mySidenav").style.width = "40%";
+        } else {
+            document.getElementById("mySidenav").style.width = "20%";
+        }
+
+        //document.getElementById("mySidenav").style.width = "20%";
+        filter_bg_grey.style.display = "block";
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        filter_bg_grey.style.display = "none";
+    }
+
+</script>
+
+{% endblock %}

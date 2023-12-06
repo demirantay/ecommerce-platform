@@ -1,0 +1,120 @@
+{% extends 'ecommerce/bases/ecommerce_base.html' %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/single_product.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- main product listing -->
+<div class="main-product-listing-wrapper">
+    <!-- left photo navigation -->
+    <div class="left-photo-nav">
+        <div class="left-photo-nav-cell photo-nav-active"
+            style="background-image: url({% static 'test_img/product_4.jpg' %});"></div>
+        <div class="left-photo-nav-cell" style="background-image: url({% static 'test_img/product_1.jpg' %});"></div>
+        <div class="left-photo-nav-cell" style="background-image: url({% static 'test_img/product_2.jpg' %});"></div>
+        <div class="left-photo-nav-cell" style="background-image: url({% static 'test_img/product_3.jpg' %});"></div>
+        <div class="left-photo-nav-cell" style="background-image: url({% static 'test_img/product_4.jpg' %});"></div>
+    </div>
+
+    <!-- content -> photo preview / reviews -->
+    <div class="product-content-wrapper">
+        <div class="product-photo-preview" style="background-image: url({% static 'test_img/product_1.jpg' %});"></div>
+    </div>
+
+    <!-- right info side -->
+    <div class="product-right-info-box">
+        <h3>OVERSIZED HOODIE 004</h3>
+        <p>Item Code: LB23FWFRWFUHD-004 / Cookie Dough / XS</p>
+
+        <h4>174.01 TL</h4>
+
+        <h5>Find My Size</h5>
+
+        <form>
+            <label>Size</label>
+            <select>
+                <option value="">S (small)</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+            </select>
+            <label>Quantity</label>
+            <select>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+            </select>
+            <input type="submit" value="Add to cart">
+        </form>
+
+        <button class="accordion single-product-accordion">Item Details <i class="ri-arrow-down-s-line"></i></button>
+        <div class="panel single-product-acc-panel">
+            <p>Regular fit
+                Seasonal print and branding embroidery at the front and back
+                Hood with drawstring
+                Kangaru pocket
+                <br><br>
+
+                COMPOSITIONS:MAIN FABRIC : %100 COTTON
+                COLOR:Cookie Dough
+                <br><br>
+                2023 - Fall/Winter
+            </p>
+        </div>
+
+        <p class="single-product-faq-link"><i class="ri-truck-line"></i> <a href="" target="_blank">Cargo Exchange /
+                Return Conditions</a></p>
+        <p class="single-product-faq-link"><i class="ri-questionnaire-line"></i> <a href="" target="_blank">Frequently
+                Asked Questions</a></p>
+
+    </div>
+</div>
+
+<div class="clear-float"></div>
+
+
+<!-- bottom other products -->
+<div class="bottom-other-products-wrapper">
+    <h2>Recommended products</h2>
+
+    <div class="recommended-products-slider">
+        <a href="">
+            <div class="recommended-product-cell" style="background-image: url({% static 'test_img/product_1.jpg' %});"></div>
+        </a>
+
+        <a href="">
+            <div class="recommended-product-cell"></div>
+        </a>
+
+        <a href="">
+            <div class="recommended-product-cell"></div>
+        </a>
+
+        <a href="">
+            <div class="recommended-product-cell"></div>
+        </a>
+
+        <a href="">
+            <div class="recommended-product-cell"></div>
+        </a>
+
+        <a href="">
+            <div class="recommended-product-cell"></div>
+        </a>
+
+        <a href="">
+            <div class="recommended-product-cell"></div>
+        </a>
+
+        <a href="">
+            <div class="recommended-product-cell"></div>
+        </a>
+    </div>
+    <p class="scroll-icon"><i class="ri-arrow-right-s-line"></i></p>
+</div>
+
+{% endblock %}

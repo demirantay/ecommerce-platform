@@ -1,0 +1,427 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+  <title>Value Forge</title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="demir antay" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="{% static 'branding/fav.png' %}" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWSOME -->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/ecommerce/ecommerce_base.css' %}" />
+
+  <!-- JQUERY CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+  {% block css_link %}
+
+  {% endblock %}
+
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <div class="top-nav">
+    <a href=""><img src="{% static 'branding/logo.png' %}" alt="logo"></a>
+    <a href="" id="menu-toggle-id" class="menu-toggle"><i class="ri-menu-line"></i> Categories</a>
+    <form>
+      <input type="text" placeholder="Search for anything">
+    </form>
+    <div class="top-nav-right">
+      <a href="" id="hidden-login-panel-open-btn"><i class="ri-user-line"></i></a>
+      <a href=""><i class="ri-heart-line"></i></a>
+      <a href="" id="hidden-cart-open-btn"><i class="ri-shopping-bag-line"></i></a>
+    </div>
+  </div>
+
+  <!-- hidden mobile top temp nav -->
+  <div class="hidden-mobile-top-nav">
+    <a href=""><img src="{% static 'branding/logo.png' %}" alt="logo"></a>
+    <div class="top-mobile-nav-right">
+      <a href="" id="hidden-mobile-login-open"><i class="ri-user-line"></i></a>
+      <a href=""><i class="ri-heart-line"></i></a>
+      <a href="#" id="hidden-shopping-mobile-temp-open"><i class="ri-shopping-bag-line"></i></a>
+      <button id="hidden-mobile-open"><i class="ri-menu-line"></i></button>
+    </div>
+    <form>
+      <input type="text" placeholder="Search for anything">
+    </form>
+  </div>
+
+  <!-- hidden left navigation -->
+  <div class="hidden-nav-bg" id="hidden-nav-bg-id"></div>
+  <div class="hidden-left-menu" id="hidden-nav-id">
+    <button id="hidden-menu-close-btn"><i class="ri-close-line"></i></button>
+    <div class="hidden-menu-categories">
+      <a href="" class="hidden-nav-logo-link"><img src="{% static 'branding/logo.png' %}" alt="logo"></a>
+      <h3>Products</h3>
+      {% for category in all_categories %}
+        <a href="{% url 'ecommerce_category_landing' category.name %}">{{ category.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- hidden right checkout navigation -->
+  <div class="hidden-right-shopping-cart" id="hidden-right-hoppinh-cart-id">
+    <a href="" id="hidden-shop-cart-close-btn"><i class="ri-close-line"></i></a>
+    <h3 id="hidden-right-shop-cart-header">Your cart (3)</h3>
+    <div class="hidden-shopping-cart-cell-wrapper">
+      <!-- cell -->
+      <div class="hidden-shopping-cart-cell">
+        <div class="hidden-shopping-cart-cell-photo"></div>
+        <div class="hidden-shopping-cart-cell-middle">
+          <h3>PRODUCT 002</h3>
+          <p>Black / M</p>
+          <h4>3,299.00TL</h4>
+          <div class="hidden-shopping-cell-operations">
+            <a href=""><i class="ri-subtract-line"></i></a>
+            <p>1</p>
+            <a href=""><i class="ri-add-line"></i></a>
+          </div>
+        </div>
+        <div class="hidden-shopping-cart-cell-right">
+          <a href="">Remove</a>
+        </div>
+      </div><!-- cell end-->
+    </div>
+    <div class="hidden-right-shopping-cart-bottom">
+      <div class="hidden-right-shopping-cart-bottom-left">
+        <h4>
+          </p><b>Subtotal</b></h4>
+        <p>Tax included. Shipping calculated at checkout.</p>
+      </div>
+      <div class="hidden-right-shopping-cart-bottom-right">
+        <h4>
+          </p><b>7,097.00TL</b></h4>
+      </div>
+      <a href="#">Checkout</a>
+
+    </div>
+  </div>
+
+  <!-- Hidden Login Panel -->
+  <div class="hidden-login-panel" id="hidden-login-panel-id">
+    <button id="hidden-login-close-btn"><i class="ri-close-line"></i></button>
+    <h3>Sign in</h3>
+    <p>Become a member — don’t miss out on deals, offers and discounts.</p>
+    <form>
+      <label>Email</label>
+      <input type="text" placeholder="" name="" id="">
+      <label>Password</label>
+      <input type="password" placeholder="" name="" id="">
+    </form>
+    <a href="" class="forgot-pass-link">Forgot password?</a>
+    <div class="clear-floats"></div>
+    <input type="submit" value="Sign in" class="sign-in-btn">
+    <a href="" class="become-member-link" id="signup-panel-open-btn">Become a member</a>
+  </div>
+
+  <!-- Hidden Signup Panel -->
+  <div class="hidden-signup-panel" id="hidden-signup-panel-id">
+    <button id="hidden-signup-close-btn"><i class="ri-close-line"></i></button>
+    <h3>Become a member</h3>
+    <p>Become a member — don’t miss out on deals, offers and discounts.</p>
+    <form>
+      <label>Email</label>
+      <input type="text" placeholder="" name="" id="">
+      <label>Password</label>
+      <input type="password" placeholder="" name="" id="">
+      <label>First Name</label>
+      <input type="text" placeholder="" name="" id="">
+      <label>Last Name</label>
+      <input type="text" placeholder="" name="" id="">
+    </form>
+    <p>By clicking ‘Become a member’, I agree to the CompanyName Membership <a href="">Terms and conditions</a>.</p>
+    <p>To give you the full membership experience, we will process your personal data in accordance with the CompanyName's <a href="">Privacy Notice</a>.</p>
+    <input type="submit" value="Become a member" class="signup-btn">
+    <a href="" id="sign-in-switch-link-id" class="sign-in-switch-link">Sign in</a>
+  </div>
+
+  <!-- Main content block -->
+  <div class="content-block">
+    {% block content %}
+
+    {% endblock %}
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-inside-wrapper">
+      <div class="footer-col">
+        <h3>Popular Categories</h3>
+        <a href="">Furniture</a>
+        <a href="">Home Office</a>
+        <a href="">Storage & Organization</a>
+        <a href="">Home Textile</a>
+        <a href="">Decoration</a>
+      </div>
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <a href="">Policies</a>
+        <a href="">Careers</a>
+        <a href="">Contact</a>
+        <a href="">Privacy</a>
+        <a href="">Legal</a>
+      </div>
+      <div class="footer-col">
+        <h3>Customer Relations</h3>
+        <a href="">Affiliates & Creators</a>
+        <a href="">Warranty Conditions</a>
+        <a href="">Return policy</a>
+        <a href="">Return/Exchange Request</a>
+        <a href="">FAQs</a>
+      </div>
+      <div class="footer-col">
+        <h3>Help</h3>
+        <a href="">Help Center</a>
+
+        <div class="footer-col-social-media">
+          <a target="_blank" href="{{ nav_links.instagram_link }}"><i class="ri-instagram-line"></i></a>
+          <a target="_blank" href="{{ nav_links.facebook_link }}"><i class="ri-facebook-circle-line"></i></a>
+          <a target="_blank" href="{{ nav_links.pinterest_link }}"><i class="ri-pinterest-line"></i></a>
+          <a target="_blank" href="{{ nav_links.twitter_link }}"><i class="ri-twitter-line"></i></a>
+          <a target="_blank" href="{{ nav_links.youtube_link }}"><i class="ri-youtube-line"></i></a>
+          <a target="_blank" href="{{ nav_links.linkedin_link }}"><i class="ri-linkedin-box-line"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+          <a href="">Terms of Use</a>
+          <a href="">Privacy</a>
+          <a href="">Interest-based ads</a>
+          <a href="">Local Shops</a>
+          <a href="">Regions</a>
+        </div>
+
+      </div>
+    </div><!-- footer wrapper end -->
+  </div><!-- footer  end -->
+
+  <!-- HIDDEN MOBILE FOOTER-->
+  <div class="hidden-mobile-footer">
+    <button class="accordion">Popular Categories <i class="ri-arrow-down-s-line"></i></button>
+    <div class="panel">
+      <a href="">Furniture</a>
+      <a href="">Home Office</a>
+      <a href="">Storage & Organization</a>
+      <a href="">Home Textile</a>
+      <a href="">Decoration</a>
+    </div>
+    <button class="accordion">About Us <i class="ri-arrow-down-s-line"></i></button>
+    <div class="panel">
+      <a href="">Policies</a>
+      <a href="">Careers</a>
+      <a href="">Contact</a>
+      <a href="">Privacy</a>
+      <a href="">Legal</a>
+    </div>
+    <button class="accordion">Customer Relations <i class="ri-arrow-down-s-line"></i></button>
+    <div class="panel">
+      <a href="">Affiliates & Creators</a>
+      <a href="">Warranty Conditions</a>
+      <a href="">Return policy</a>
+      <a href="">Return/Exchange Request</a>
+      <a href="">FAQs</a>
+    </div>
+    <div class="mobile-footer-social-media">
+      <a href="{{ nav_links.instagram_link }}"><i class="ri-instagram-line"></i></a>
+      <a href="{{ nav_links.facebook_link }}"><i class="ri-facebook-circle-line"></i></a>
+      <a href="{{ nav_links.pinterest_link }}"><i class="ri-pinterest-line"></i></a>
+      <a href="{{ nav_links.twitter_link }}"><i class="ri-twitter-line"></i></a>
+      <a href="{{ nav_links.youtube_link }}"><i class="ri-youtube-line"></i></a>
+      <a href="{{ nav_links.linkedin_link }}"><i class="ri-linkedin-box-line"></i></a>
+    </div>
+    <div class="mobile-footer-bottom">
+      <div class="mobile-footer-bottom-wrapper">
+        <a href="">Terms of Use</a>
+        <a href="">Privacy</a>
+        <a href="">Interest-based ads</a>
+        <a href="">Local Shops</a>
+        <a href="">Regions</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- JS LOGIC OF THE DOM ABOVE -->
+  <script>
+    // misc var logic
+    var inner_width;
+    function getWindowSize() {
+        inner_width = window.innerWidth;
+    }
+    window.onresize = getWindowSize();
+
+    // left menu toggle logic
+    let open_btn = document.getElementById("menu-toggle-id");
+    let close_btn = document.getElementById("hidden-menu-close-btn");
+    let bg_greying = document.getElementById("hidden-nav-bg-id");
+    let hidden_menu = document.getElementById("hidden-nav-id");
+    let hidden_mobile_open = document.getElementById("hidden-mobile-open");
+
+    open_btn.onclick = function (event) {
+      event.preventDefault();
+      hidden_menu.style.width = "34%";
+      bg_greying.style.display = "block";
+    }
+
+    hidden_mobile_open.onclick = function (event) {
+      event.preventDefault();
+      if (inner_width <= 425) {
+        hidden_menu.style.width = "95%";
+      } else if (inner_width <= 768) {
+        hidden_menu.style.width = "90%";
+      } else if (inner_width <= 1024) {
+        hidden_menu.style.width = "40%";
+      } else {
+        hidden_menu.style.width = "34%";
+      }
+      bg_greying.style.display = "block";
+    }
+
+    close_btn.onclick = function (event) {
+      hidden_menu.style.width = "0";
+      bg_greying.style.display = "none";
+    }
+
+    // hidden login panel toggle logic
+    let hidden_login_panel_open = document.getElementById("hidden-login-panel-open-btn");
+    let hidden_login_panel_mobile_open = document.getElementById("hidden-mobile-login-open");
+    let hidden_login_panel_close = document.getElementById("hidden-login-close-btn");
+    let hidden_login_panel = document.getElementById("hidden-login-panel-id");
+
+    let hidden_signup_panel = document.getElementById("hidden-signup-panel-id");
+    let hidden_signup_panel_open_btn = document.getElementById("signup-panel-open-btn");
+    let hidden_signup_close_btn = document.getElementById("hidden-signup-close-btn");
+    let hidden_login_panel_switch_btn = document.getElementById("sign-in-switch-link-id");
+
+    hidden_login_panel_open.onclick = function(event) {
+      event.preventDefault();
+      hidden_login_panel.style.display = "block";
+      bg_greying.style.display = "block";
+    }
+
+    hidden_login_panel_mobile_open.onclick = function(event) {
+      event.preventDefault();
+      hidden_login_panel.style.display = "block";
+      bg_greying.style.display = "block";
+    }
+
+    hidden_login_panel_close.onclick = function(event) {
+      event.preventDefault();
+      hidden_login_panel.style.display = "none";
+      bg_greying.style.display = "none";
+    }
+    
+    hidden_signup_panel_open_btn.onclick = function(event) {
+      event.preventDefault();
+      hidden_login_panel.style.display = "none";
+      hidden_signup_panel.style.display = "block";
+    }
+
+    hidden_login_panel_switch_btn.onclick = function(event) {
+      event.preventDefault();
+      hidden_login_panel.style.display = "block";
+      hidden_signup_panel.style.display = "none";
+    }
+
+    hidden_signup_close_btn.onclick = function(event) {
+      event.preventDefault();
+      hidden_signup_panel.style.display = "none";
+      bg_greying.style.display = "none";
+    }
+
+
+    // right checkout cart toggle logic    
+
+    let open_hidden_cart_btn = document.getElementById("hidden-cart-open-btn");
+    let hidden_checkout_cart_menu = document.getElementById("hidden-right-hoppinh-cart-id");
+    let cart_close_btn = document.getElementById("hidden-shop-cart-close-btn");
+    let hidden_mobile_shopping_open = document.getElementById("hidden-shopping-mobile-temp-open");
+
+    open_hidden_cart_btn.onclick = function (event) {
+      event.preventDefault();
+      if (inner_width <= 425) {
+        hidden_checkout_cart_menu.style.width = "80%";
+      } else if (inner_width <= 1024) {
+        hidden_checkout_cart_menu.style.width = "40%";
+      } else {
+        hidden_checkout_cart_menu.style.width = "32%";
+      }
+      // hidden_checkout_cart_menu.style.width = "32%";
+      bg_greying.style.display = "block";
+    }
+
+    hidden_mobile_shopping_open.onclick = function (event) {
+      event.preventDefault();
+      if (inner_width <= 425) {
+        hidden_checkout_cart_menu.style.width = "80%";
+      } else if (inner_width <= 768) {
+        hidden_checkout_cart_menu.style.width = "60%";
+      } else if (inner_width <= 1024) {
+        hidden_checkout_cart_menu.style.width = "40%";
+      } else {
+        hidden_checkout_cart_menu.style.width = "32%";
+      }
+      // hidden_checkout_cart_menu.style.width = "32%";
+      bg_greying.style.display = "block";
+    }
+
+    cart_close_btn.onclick = function (event) {
+      event.preventDefault();
+      hidden_checkout_cart_menu.style.width = "0";
+      bg_greying.style.display = "none";
+    }
+
+    // accordion logic
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function (event) {
+        event.preventDefault();
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
